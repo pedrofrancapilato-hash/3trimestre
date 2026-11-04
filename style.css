@@ -19,7 +19,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-.cabecalho-imagem{
+.cabecalho_imagem{
 width: 10%;
 display: flex;
 justify-content: flex-start;
@@ -40,6 +40,12 @@ padding-right: 30px;
 .banner1{
 display: flex;
 justify-content: center;
+}
+
+.escola-titulo {
+    max-width: 100%;
+    display: block;
+    height: auto;
 }
 .estudante_titulo{
 padding: 50px;
