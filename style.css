@@ -137,3 +137,24 @@ ul li a:hover {
     border-radius: 12px;      /* Deixa os cantos arredondados */
     display: block;           /* Evita espaços fantasma embaixo do vídeo */
 }
+
+.mapa-container {
+    width: 92%;               /* Mesma largura do vídeo no celular */
+    max-width: 800px;         /* Mesma largura máxima do vídeo no PC */
+    margin: 40px auto;        /* Centraliza na tela e dá espaço em cima e embaixo */
+    text-align: center;       /* Centraliza o título "Localização" */
+}
+
+.mapa-container h2 {
+    margin-bottom: 15px;      /* Dá um espaço entre o título e o mapa */
+    font-size: 1.5rem;
+}
+
+.mapa-container iframe {
+    width: 100%;              /* Faz o mapa ocupar toda a largura da div */
+    height: 400px;            /* Altura boa para navegar no mapa */
+    border: 0;                /* Tira a borda padrão feia do iframe */
+    border-radius: 12px;      /* Deixa os cantos arredondados igual ao vídeo */
+    display: block;
+}
+
