@@ -122,3 +122,18 @@ ul li a {
 ul li a:hover {
   background-color: #111111;
 }
+
+
+.video-container {
+    width: 92%;               /* No celular, deixa uma margem pequena nas laterais */
+    max-width: 800px;         /* No PC, impede que o vídeo fique grande demais */
+    margin: 25px auto;        /* Centraliza na tela em qualquer aparelho */
+}
+
+.video-container iframe {
+    width: 100%;              /* Estica o vídeo para preencher a div */
+    height: auto;             /* Ignora alturas fixas antigas */
+    aspect-ratio: 16 / 9;     /* Mantém o formato retangular de vídeo sem cortar */
+    border-radius: 12px;      /* Deixa os cantos arredondados */
+    display: block;           /* Evita espaços fantasma embaixo do vídeo */
+}
