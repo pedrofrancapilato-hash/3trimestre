@@ -226,3 +226,86 @@ ul li a:hover {
 .link-jogo a:hover {
     text-decoration: underline;
 }
+/* 1. Transforma o corpo da página em coluna flexível para reposicionar o menu sem tocar no HTML */
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mantém o cabeçalho (Logo + Pedro França) no topo absoluto */
+header {
+  order: -2; 
+}
+
+/* 2. Puxa a caixa do menu lá de baixo para logo abaixo do cabeçalho */
+nav { /* <-- Se seu menu for uma div, troque "nav" pela classe dela (ex: .menu) */
+  order: -1;
+  background-color: #232a30;
+  width: 100%;
+  height: auto; /* Remove aquela altura quadrada gigante que estava lá embaixo */
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #4299e1;
+}
+
+/* 3. Organiza a área dos cards dos jogadores lado a lado */
+.jogadores { /* <-- Troque pela classe ou tag da caixa que guarda os 4 jogadores */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1150px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+/* 4. Padroniza o visual e o tamanho de cada card individual */
+.card { /* <-- Troque pela classe de cada bloco de jogador */
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  max-width: 240px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Deixa todas as fotos dos jogadores com a mesma altura sem esticar */
+.card > img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Mantém os ícones pequenos (Instagram/Facebook) no tamanho certo */
+.card a img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
