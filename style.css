@@ -144,60 +144,6 @@ ul li a:hover {
   position: static;       /* Garante que não fique preso no canto */
 }
 
-/* 1. MENU DE NAVEGAÇÃO (Igual ao da página do vídeo) */
-nav {
-    background-color: #333333; /* Fundo cinza escuro */
-    width: 100%;               /* Ocupa a largura toda da tela */
-    padding: 15px 20px;        /* Espaçamento interno (altura e lateral) */
-    display: flex;             /* Coloca os links lado a lado */
-    gap: 25px;                 /* Espaço entre cada palavra do menu */
-    box-sizing: border-box;  /* Garante que o padding não estoure a tela */
-}
-
-nav a {
-    color: #ffffff;            /* Cor do texto branca */
-    text-decoration: none;     /* Tira o sublinhado padrão dos links */
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-}
-
-nav a:hover {
-    text-decoration: underline; /* Efeito opcional ao passar o mouse */
-}
-
-/* 2. ÁREA PRINCIPAL DOS CARDS */
-.container-cards {
-    display: flex;             /* Coloca os cards lado a lado */
-    flex-wrap: wrap;           /* Quebra para a linha de baixo se faltar espaço */
-    justify-content: center;   /* Centraliza o grupo de cards na página */
-    gap: 30px;                 /* Espaço uniforme entre os cards */
-    max-width: 1000px;         /* Largura máxima para alinhar com o centro */
-    margin: 30px auto;         /* Centraliza o bloco todo na tela */
-}
-
-/* 3. CADA CARD INDIVIDUAL */
-.card {
-    display: flex;
-    flex-direction: column;    /* Empilha foto, nome e links de cima para baixo */
-    align-items: center;       /* Centraliza tudo dentro do card */
-    text-align: center;
-    width: 200px;              /* Deixa todos os cards com a mesma largura */
-}
-
-.card img {
-    width: 100%;               /* Faz a foto preencher a largura do card */
-    height: 220px;             /* Padroniza a altura das fotos */
-    object-fit: cover;         /* Evita que a foto fique esticada ou achatada */
-}
-
-/* 4. CORREÇÃO PARA O RODAPÉ NÃO SUBIR */
-footer {
-    width: 100%;
-    clear: both;
-    margin-top: 40px;
-}
-
-
 /* Área principal do jogo */
 .secao-jogo {
     width: 100%;
