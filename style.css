@@ -144,6 +144,60 @@ ul li a:hover {
   position: static;       /* Garante que não fique preso no canto */
 }
 
+/* 1. MENU DE NAVEGAÇÃO (Igual ao da página do vídeo) */
+nav {
+    background-color: #333333; /* Fundo cinza escuro */
+    width: 100%;               /* Ocupa a largura toda da tela */
+    padding: 15px 20px;        /* Espaçamento interno (altura e lateral) */
+    display: flex;             /* Coloca os links lado a lado */
+    gap: 25px;                 /* Espaço entre cada palavra do menu */
+    box-sizing: border-box;  /* Garante que o padding não estoure a tela */
+}
+
+nav a {
+    color: #ffffff;            /* Cor do texto branca */
+    text-decoration: none;     /* Tira o sublinhado padrão dos links */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Efeito opcional ao passar o mouse */
+}
+
+/* 2. ÁREA PRINCIPAL DOS CARDS */
+.container-cards {
+    display: flex;             /* Coloca os cards lado a lado */
+    flex-wrap: wrap;           /* Quebra para a linha de baixo se faltar espaço */
+    justify-content: center;   /* Centraliza o grupo de cards na página */
+    gap: 30px;                 /* Espaço uniforme entre os cards */
+    max-width: 1000px;         /* Largura máxima para alinhar com o centro */
+    margin: 30px auto;         /* Centraliza o bloco todo na tela */
+}
+
+/* 3. CADA CARD INDIVIDUAL */
+.card {
+    display: flex;
+    flex-direction: column;    /* Empilha foto, nome e links de cima para baixo */
+    align-items: center;       /* Centraliza tudo dentro do card */
+    text-align: center;
+    width: 200px;              /* Deixa todos os cards com a mesma largura */
+}
+
+.card img {
+    width: 100%;               /* Faz a foto preencher a largura do card */
+    height: 220px;             /* Padroniza a altura das fotos */
+    object-fit: cover;         /* Evita que a foto fique esticada ou achatada */
+}
+
+/* 4. CORREÇÃO PARA O RODAPÉ NÃO SUBIR */
+footer {
+    width: 100%;
+    clear: both;
+    margin-top: 40px;
+}
+
+
 /* Área principal do jogo */
 .secao-jogo {
     width: 100%;
@@ -211,101 +265,4 @@ ul li a:hover {
 .botao-tela-cheia:hover {
     background: #c49b45;
     color: #111111;
-}
-
-/* Link para abrir o jogo em outra aba */
-.link-jogo {
-    margin-top: 14px;
-}
-
-.link-jogo a {
-    color: #c49b45;
-    text-decoration: none;
-}
-
-.link-jogo a:hover {
-    text-decoration: underline;
-}
-/* 1. Transforma o corpo da página em coluna flexível para reposicionar o menu sem tocar no HTML */
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Mantém o cabeçalho (Logo + Pedro França) no topo absoluto */
-header {
-  order: -2; 
-}
-
-/* 2. Puxa a caixa do menu lá de baixo para logo abaixo do cabeçalho */
-nav { /* <-- Se seu menu for uma div, troque "nav" pela classe dela (ex: .menu) */
-  order: -1;
-  background-color: #232a30;
-  width: 100%;
-  height: auto; /* Remove aquela altura quadrada gigante que estava lá embaixo */
-  padding: 15px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 35px;
-}
-
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: #4299e1;
-}
-
-/* 3. Organiza a área dos cards dos jogadores lado a lado */
-.jogadores { /* <-- Troque pela classe ou tag da caixa que guarda os 4 jogadores */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  max-width: 1150px;
-  width: 100%;
-  margin: 30px auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-  justify-items: center;
-}
-
-/* 4. Padroniza o visual e o tamanho de cada card individual */
-.card { /* <-- Troque pela classe de cada bloco de jogador */
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 15px;
-  width: 100%;
-  max-width: 240px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Deixa todas as fotos dos jogadores com a mesma altura sem esticar */
-.card > img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 10px;
-}
-
-/* Mantém os ícones pequenos (Instagram/Facebook) no tamanho certo */
-.card a img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
 }
